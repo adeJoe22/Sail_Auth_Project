@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const URL =
-  'mongodb+srv://adedejiomogbehin:adedejiomogbehin@serverless.oojrnir.mongodb.net/?retryWrites=true&w=majority&appName=serverless';
+const URL = process.env.MONGOURL;
 
 const dbConfig = async () => {
   try {
